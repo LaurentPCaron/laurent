@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
 
     <link
       rel="stylesheet"
@@ -19,7 +20,7 @@
   </head>
 
   <body>
-    <div class="page-title">
+    <div class="page-title" id="top">
       <h1 class="myName">Laurent-Philippe Caron</h1>
       <h2 class="jobTitle">Programmeur front-end React/Redux</h2>
     </div>
@@ -50,8 +51,16 @@
       </div>
       <div class="header__buttons">
         <h2>Técharger mon C.V.</h2>
-        <a class="ui button brown" href="#">Français</a>
-        <a class="ui button brown" href="#">English</a>
+        <a
+          class="ui button brown"
+          href="https://mega.nz/file/3chBgZ4S#Z8zrhvfH7m5-XG1Ba_5WQ493D961s7BZFdAMs6t8Xzg"
+          >Français</a
+        >
+        <a
+          class="ui button brown"
+          href="https://mega.nz/file/XchRxRzZ#tngWqLn2OuJ4wGIk3dgiOBAgQef4oiW0AVBbRWLKwXg"
+          >English</a
+        >
       </div>
     </header>
 
@@ -59,32 +68,168 @@
       <div class="exps section">
         <h2 class="section-title">Expérience Professionnelles</h2>
 
-        <div class="exp">
+        <div class="exp odd">
           <div class="box">
             <div class="box__title">
-              <h3>Programeur front-end</h3>
+              <h3>Développeur web front-end et assurance de la qualité</h3>
             </div>
             <div class="box-top">
-              <h4>Radio-Canada</h4>
-              <p>2019</p>
+              <h4>UNI3T</h4>
+              <p>Janvier 2020 ~ Mars 2020</p>
             </div>
             <div class="box-bottom">
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto
-                vel eveniet enim optio ratione. Libero id repellat quia
-                voluptatem eum expedita quibusdam aliquid est ipsa ut debitis,
-                accusamus quos pariatur.
-              </p>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio
-                asperiores distinctio dolorem dolore soluta sunt quasi, nostrum
-                omnis autem excepturi est adipisci, nesciunt eligendi dicta non
-                itaque eius at ex.
-              </p>
+              <strong>Technologies</strong>
+              <ul>
+                <li>HTML/CSS/JS</li>
+                <li>React</li>
+                <li>Cypres.io</li>
+                <li>Gitlab</li>
+              </ul>
+              <strong>Tâches</strong>
+              <ul class="tasks">
+                <li>
+                  Réparer les bogues répertoriés dans le backlog en utilisant le
+                  framework React.
+                </li>
+                <li>
+                  Utiliser Cyrpess.io pour créer des jeux de test End-to-end
+                  pour l'interface front-end du logiciel.
+                </li>
+                <li>
+                  Faire un compte-rendu à chaque deux semaines des tâches
+                  accomplies et des difficultés rencontrés lors du sprint.
+                </li>
+                <li>
+                  Utiliser le système GitLab pour faire le suivie des tâches et
+                  des bogues du logiciel.
+                </li>
+              </ul>
             </div>
           </div>
           <div class="exp__img">
             <img src="./img/uni3t.png" alt="logo uni3t" />
+          </div>
+        </div>
+
+        <div class="exp even">
+          <div class="box">
+            <div class="box__title">
+              <h3>Développeur web front-end</h3>
+            </div>
+            <div class="box-top">
+              <h4>Radio-Canada</h4>
+              <p>Avril 2019 ~ Août 2019</p>
+            </div>
+            <div class="box-bottom">
+              <strong>Technologies</strong>
+              <ul>
+                <li>HTML/CSS/JS</li>
+                <li>React/Redux</li>
+                <li>Azure</li>
+                <li>Git</li>
+                <li>C#</li>
+              </ul>
+              <strong>Tâches</strong>
+              <ul class="tasks">
+                <li>
+                  Compléter et intégrer des composantes React à la nouvelle
+                  application web
+                </li>
+                <li>
+                  Connecter des composantes React aux différents API de
+                  Radio-Canada.
+                </li>
+                <li>Modifier les sorties du Back-End en C#.</li>
+                <li>
+                  Créer des patrons RegEx pour la validation de différents
+                  champs.
+                </li>
+                <li>
+                  Utiliser le système Azure pour faire le suivie des tâches et
+                  des bogues du logiciel.
+                </li>
+                <li>
+                  Assister à des réunions de fins de sprint afin de faire la
+                  démonstration des tâches accomplie, d'évaluer le niveau de
+                  complexité des nouvelles tâches et répartir les tâches
+                  restantes.
+                </li>
+                <li>
+                  Assister à des réunions Scrum afin de partager les réussites,
+                  expliquer les difficultés rencontrées et proposer les
+                  nouvelles idées pour l'équipe et le projet.
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="exp__img">
+            <img src="./img/CBC.png" alt="logo uni3t" />
+          </div>
+        </div>
+
+        <div class="exp odd">
+          <div class="box">
+            <div class="box__title">
+              <h3>Programmeur</h3>
+            </div>
+            <div class="box-top">
+              <h4>Comission Scolaire du Val-des-Cerfs</h4>
+              <p>Janvier 2013 ~ Août 2013</p>
+            </div>
+            <div class="box-bottom">
+              <strong>Technologies</strong>
+              <ul>
+                <li>Microsoft Excel & VBA</li>
+                <li>SQL</li>
+                <li>Microsoft Access</li>
+                <li>Symantec Ghost</li>
+              </ul>
+              <strong>Tâches</strong>
+              <ul class="tasks">
+                <li>
+                  Développer des feuille Excel de la population étudiante dans
+                  la commission scolaire en VBA pour les connecter à la base
+                  données SQL.
+                </li>
+                <li>
+                  Initialiser des ordinateurs portables utilisés par le cadre
+                  professionnel de la commission scolaire.
+                </li>
+                <li>Modifier les sorties du Back-End en C#.</li>
+                <li>
+                  Créer de la documentation pour l'utilisation des outils de
+                  gestions.
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="exp__img">
+            <img src="./img/CSVDC.png" alt="logo uni3t" />
+          </div>
+        </div>
+
+        <div class="exp even">
+          <div class="box">
+            <div class="box__title">
+              <h3>Animateur de panel (Bénévolat)</h3>
+            </div>
+            <div class="box-top">
+              <h4>Otakuthon</h4>
+              <p>2012 ~ 2019</p>
+            </div>
+            <div class="box-bottom">
+              <strong>Tâches</strong>
+              <ul class="tasks">
+                <li>
+                  Préparer un panel en choisissant un sujet et s'informer
+                  suffisamment pour animer des panels de 45 minutes à 1 heure.
+                </li>
+                <li>Développer un logiciel maison de jeu questionnaire.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="exp__img">
+            <img src="./img/Otakuthon_logo.png" alt="logo uni3t" />
           </div>
         </div>
       </div>
@@ -98,10 +243,28 @@
             </div>
             <div class="bottom">
               <div class="bottom__skil">
-                <h4>HTML5</h4>
+                <h4><i class="html5 icon big"></i>HTML5</h4>
+                <div class="ui brown progress inverted">
+                  <div class="bar" style="width: 60%">
+                    <div class="progress">6/10</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bottom__skil">
+                <h4><i class="css3 icon big"></i>CSS3</h4>
+                <div class="ui brown progress inverted">
+                  <div class="bar" style="width: 60%">
+                    <div class="progress">6/10</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bottom__skil">
+                <h4><i class="sass icon big"></i>Sass</h4>
                 <div class="ui brown progress inverted">
                   <div class="bar" style="width: 50%">
-                    <div class="progress">50%</div>
+                    <div class="progress">5/10</div>
                   </div>
                 </div>
               </div>
@@ -110,14 +273,139 @@
 
           <div class="skill-box">
             <div class="top">
-              <h3>Back-end</h3>
+              <h3>JavaScript</h3>
+            </div>
+
+            <div class="bottom__skil">
+              <h4><i class="js icon big"></i>Javascript vanille</h4>
+              <div class="ui brown progress inverted">
+                <div class="bar" style="width: 30%">
+                  <div class="progress">3/10</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="bottom__skil">
+              <h4><i class="react icon big"></i>React</h4>
+              <div class="ui brown progress inverted">
+                <div class="bar" style="width: 60%">
+                  <div class="progress">6/10</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="bottom__skil">
+              <h4>
+                <span
+                  class="iconify"
+                  data-icon="simple-icons:redux"
+                  data-inline="true"
+                  data-height="30px"
+                ></span>
+                Redux
+              </h4>
+              <div class="ui brown progress inverted">
+                <div class="bar" style="width: 60%">
+                  <div class="progress">6/10</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-box">
+            <div class="top">
+              <h3>Autres codes</h3>
+            </div>
+
+            <div class="bottom__skil">
+              <h4><i class="node js icon big"></i>NodeJS</h4>
+              <div class="ui brown progress inverted">
+                <div class="bar" style="width: 30%">
+                  <div class="progress">3/10</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="bottom__skil">
+              <h4>
+                <span
+                  class="iconify"
+                  data-icon="teenyicons:c-sharp-solid"
+                  data-inline="true"
+                  data-height="30px"
+                ></span>
+                C#
+              </h4>
+              <div class="ui brown progress inverted">
+                <div class="bar" style="width: 30%">
+                  <div class="progress">3/10</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="bottom__skil">
+              <h4>
+                <span
+                  class="iconify"
+                  data-icon="cib:java"
+                  data-inline="true"
+                  data-height="30px"
+                ></span>
+                Java
+              </h4>
+              <div class="ui brown progress inverted">
+                <div class="bar" style="width: 30%">
+                  <div class="progress">3/10</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-box">
+            <div class="top">
+              <h3>Autres</h3>
             </div>
             <div class="bottom">
               <div class="bottom__skil">
-                <h4>JS.Node</h4>
+                <h4>
+                  <span
+                    class="iconify"
+                    data-icon="dashicons:database"
+                    data-inline="true"
+                    data-height="30px"
+                  ></span
+                  >SQL
+                </h4>
                 <div class="ui brown progress inverted">
-                  <div class="bar" style="width: 50%">
-                    <div class="progress">50%</div>
+                  <div class="bar" style="width: 30%">
+                    <div class="progress">3/10</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bottom__skil">
+                <h4><i class="github icon big"></i>Git</h4>
+                <div class="ui brown progress inverted">
+                  <div class="bar" style="width: 70%">
+                    <div class="progress">7/10</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bottom__skil">
+                <h4>
+                  <span
+                    class="iconify"
+                    data-icon="file-icons:vscode"
+                    data-inline="true"
+                    data-height="30px"
+                  >
+                  </span>
+                  VSCode
+                </h4>
+                <div class="ui brown progress inverted">
+                  <div class="bar" style="width: 80%">
+                    <div class="progress">8/10</div>
                   </div>
                 </div>
               </div>
@@ -126,30 +414,41 @@
 
           <div class="skill-box">
             <div class="top">
-              <h3>Back-end</h3>
+              <h3>Langues</h3>
             </div>
             <div class="bottom">
               <div class="bottom__skil">
-                <h4>JS.Node</h4>
+                <h4>
+                  <span
+                    class="iconify"
+                    data-icon="emojione:flag-for-france"
+                    data-inline="true"
+                    data-height="30px"
+                  >
+                  </span>
+                  Français
+                </h4>
                 <div class="ui brown progress inverted">
-                  <div class="bar" style="width: 50%">
-                    <div class="progress">50%</div>
+                  <div class="bar" style="width: 100%">
+                    <div class="progress">10/10</div>
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
 
-          <div class="skill-box">
-            <div class="top">
-              <h3>Back-end</h3>
-            </div>
-            <div class="bottom">
               <div class="bottom__skil">
-                <h4>JS.Node</h4>
+                <h4>
+                  <span
+                    class="iconify"
+                    data-icon="emojione:flag-for-united-kingdom"
+                    data-inline="true"
+                    data-height="30px"
+                  >
+                  </span>
+                  Anglais
+                </h4>
                 <div class="ui brown progress inverted">
-                  <div class="bar" style="width: 50%">
-                    <div class="progress">50%</div>
+                  <div class="bar" style="width: 80%">
+                    <div class="progress">8/10</div>
                   </div>
                 </div>
               </div>
@@ -163,11 +462,33 @@
 
         <div class="formation">
           <div class="top">
-            <h3>DEP en technique en informatique de gestion</h3>
-            <div class="date">Septembre 2013</div>
+            <h3>CSS - The Complete Guide 2020 (incl. Flexbox, Grid & Sass)</h3>
+            <div class="date">Septembre 2020</div>
           </div>
           <div class="bottom">
-            <h4>Cegep de Granby Haute-Yamaska</h4>
+            <h4>Udemy</h4>
+          </div>
+          <hr />
+        </div>
+
+        <div class="formation">
+          <div class="top">
+            <h3>Modern React with Redux [2020 Update]</h3>
+            <div class="date">Avril 2020</div>
+          </div>
+          <div class="bottom">
+            <h4>Udemy</h4>
+          </div>
+          <hr />
+        </div>
+
+        <div class="formation">
+          <div class="top">
+            <h3>BAC Génie Logiciel</h3>
+            <div class="date">Non complété</div>
+          </div>
+          <div class="bottom">
+            <h4>École de Technologie Supérieure</h4>
           </div>
           <hr />
         </div>
@@ -183,43 +504,13 @@
           <hr />
         </div>
       </div>
-
-      <div class="other section">
-        <h2 class="section-title">Expérience Professionnelles</h2>
-        <div class="box">
-          <div class="box-top">
-            <h4>Radio-Canada</h4>
-            <p>2019</p>
-          </div>
-          <div class="box-bottom">
-            <h3>Programeur front-end</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto
-              vel eveniet enim optio ratione. Libero id repellat quia voluptatem
-              eum expedita quibusdam aliquid est ipsa ut debitis, accusamus quos
-              pariatur.
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio
-              asperiores distinctio dolorem dolore soluta sunt quasi, nostrum
-              omnis autem excepturi est adipisci, nesciunt eligendi dicta non
-              itaque eius at ex.
-            </p>
-          </div>
-        </div>
-      </div>
     </main>
-    <!-- <span
-      >Photo by
-      <a
-        href="https://unsplash.com/@thejmoore?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText"
-        >Jon Moore</a
-      >
-      on
-      <a
-        href="https://unsplash.com/s/photos/wood?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText"
-        >Unsplash</a
-      ></span
-    > -->
+    <footer>
+      <p>Créé par Laurent-Philippe Caron</p>
+      <p>Mis à jour le 11 septembre 2020</p>
+      <p>
+        <a href="#top"><i class="ui icon arrow up huge"></i></a>
+      </p>
+    </footer>
   </body>
 </html>
