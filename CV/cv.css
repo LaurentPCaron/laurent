@@ -28,7 +28,7 @@ h2 {
         grid-template-areas: "image content"; } }
 
 .box {
-  width: 95%;
+  width: 100%;
   grid-area: content;
   background: #ffe6a7;
   display: grid;
@@ -42,6 +42,9 @@ h2 {
   .box h3 {
     font-size: 150%;
     margin: 0.5rem 0rem; }
+  @media (min-width: 40rem) {
+    .box {
+      width: 95%; } }
 
 .box__title,
 .box-top {
@@ -81,6 +84,7 @@ h2 {
   display: flex;
   align-items: center; }
   .exp__img img {
+    margin: 0 auto;
     width: 65%;
     height: auto;
     max-height: 13.2rem;
@@ -188,18 +192,22 @@ header {
 
 @media (min-width: 40rem) {
   .formation:nth-child(odd) {
-    text-align: right; }
-
-  footer {
-    padding: 2rem 1.2rem 0 1.2rem;
-    transform: translateY(15rem);
-    background: #432818;
-    color: #ffffff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center; }
-    footer a,
-    footer a:hover {
-      color: #b67648; } }
+    text-align: right; } }
+footer {
+  padding: 2rem 1.2rem 0 1.2rem;
+  transform: translateY(15rem);
+  background: #432818;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  footer a,
+  footer a:hover {
+    color: #b67648; }
+  footer .footer__up {
+    display: none; }
+    @media (min-width: 40rem) {
+      footer .footer__up {
+        display: block; } }
 
 /*# sourceMappingURL=cv.css.map */

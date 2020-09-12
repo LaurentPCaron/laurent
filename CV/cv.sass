@@ -34,7 +34,7 @@ h2
       grid-template-areas: 'image content'
 
 .box
-  width: 95%
+  width: 100%
   grid-area: content
   background: map-get($colors, "secondary")
   display: grid
@@ -49,6 +49,8 @@ h2
   h3
     font-size: 150%
     margin: 0.5rem 0rem
+  @include media-min-width(40rem)
+    width: 95%
 
 .box__title,
 .box-top
@@ -88,7 +90,10 @@ h2
   display: flex
   align-items: center
 
+  @include media-min-width(40rem)
+
   img
+    margin: 0 auto
     width: 65%
     height: auto
     max-height: 13.2rem
@@ -200,14 +205,18 @@ header
   .formation:nth-child(odd)
     text-align: right
 
-  footer
-    padding: 2rem 1.2rem 0 1.2rem
-    transform: translateY(15rem)
-    background: map-get($colors, "dark")
-    color: map-get($colors, "text")
-    display: flex
-    justify-content: space-between
-    align-items: center
-    a,
-    a:hover
-      color: map-get($colors, "primary")
+footer
+  padding: 2rem 1.2rem 0 1.2rem
+  transform: translateY(15rem)
+  background: map-get($colors, "dark")
+  color: map-get($colors, "text")
+  display: flex
+  justify-content: space-between
+  align-items: center
+  a,
+  a:hover
+    color: map-get($colors, "primary")
+  .footer__up
+    display: none
+    @include media-min-width(40rem)
+      display: block
