@@ -53,14 +53,12 @@
         <h2>Técharger mon C.V.</h2>
         <a
           class="ui button brown"
-          download
-          href="cv/CV_Caron_Laurent-Philippe_FR.pdf"
+          href="https://mega.nz/file/3chBgZ4S#Z8zrhvfH7m5-XG1Ba_5WQ493D961s7BZFdAMs6t8Xzg"
           >Français</a
         >
         <a
           class="ui button brown"
-          download
-          href="cv/Resume_Caron_Laurent-Philippe_EN.pdf"
+          href="https://mega.nz/file/XchRxRzZ#tngWqLn2OuJ4wGIk3dgiOBAgQef4oiW0AVBbRWLKwXg"
           >English</a
         >
       </div>
@@ -195,9 +193,9 @@
                 </li>
                 <li>
                   Initialiser des ordinateurs portables utilisés par le cadre
-                  professionnel de la commission scolaire en utilisant Symantec
-                  Ghost.
+                  professionnel de la commission scolaire.
                 </li>
+                <li>Modifier les sorties du Back-End en C#.</li>
                 <li>
                   Créer de la documentation pour l'utilisation des outils de
                   gestions.
@@ -513,6 +511,7 @@
       <p class="footer__up">
         <a href="#top"><i class="ui icon arrow up huge"></i></a>
       </p>
+      FART
     </footer>
   </body>
 </html>
