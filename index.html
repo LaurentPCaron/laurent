@@ -20,53 +20,108 @@
   </head>
 
   <body>
-    <div class="page-title" id="top">
-      <h1 class="myName">Laurent-Philippe Caron</h1>
-      <h2 class="jobTitle">Programmeur front-end React/Redux</h2>
+    <div id="top_menu">
+      <div class="ui inverted segment attached">
+        <div class="ui inverted secondary pointing menu">
+          <a class="item active" id="menu__home">Accueil</a>
+          <a class="item" id="menu__projects"> Projet </a>
+          <a class="item" id="menu__exp"> Expériences </a>
+          <a class="item" id="menu__skills"> Compétences </a>
+          <a class="item" id="menu__educ"> Formations </a>
+        </div>
+      </div>
     </div>
-    <header class="header section">
-      <div class="header__image">
-        <img src="./profil.jpeg" alt="Profil" />
-      </div>
 
-      <div class="header__contacts">
-        <a href="https://github.com/LaurentPCaron"
-          ><i class="big github icon"></i
-        ></a>
-        <a href="https://www.linkedin.com/in/laurent-philippe-caron-b48b4862/"
-          ><i class="big linkedin icon"></i
-        ></a>
-        <a href="mailto:info@laurentpcaron.ninja"
-          ><i class="big mail icon"></i
-        ></a>
+    <div id="top">
+      <div class="page-title wood_back">
+        <div class="wood__tran-box"></div>
+        <h1 class="myName">Laurent-Philippe Caron</h1>
+        <h2 class="jobTitle">Programmeur front-end React/Redux</h2>
       </div>
+      <header class="header section">
+        <div class="header__image">
+          <img src="./profil.jpeg" alt="Profil" />
+        </div>
 
-      <div class="header__resume">
-        <h4>
-          Programmeur front-end débutant, accro au café et diplômé du Cégep de
-          Granby Haute-Yamaska. <br />
-          Je me spécialise en HTML, CSS, JavaScript, React et Redux. J'ai aussi
-          une fantastique recette de curry japonais et macaroni au fromage.
-        </h4>
-      </div>
-      <div class="header__buttons">
-        <h2>Técharger mon C.V.</h2>
-        <a
-          class="ui button brown"
-          download
-          href="cv/CV_Caron_Laurent-Philippe_FR.pdf"
-          >Français</a
-        >
-        <a
-          class="ui button brown"
-          download
-          href="cv/Resume_Caron_Laurent-Philippe_EN.pdf"
-          >English</a
-        >
-      </div>
-    </header>
+        <div class="header__contacts">
+          <a href="https://github.com/LaurentPCaron"
+            ><i class="big github icon"></i
+          ></a>
+          <a href="https://www.linkedin.com/in/laurent-philippe-caron-b48b4862/"
+            ><i class="big linkedin icon"></i
+          ></a>
+          <a href="mailto:info@laurentpcaron.ninja"
+            ><i class="big mail icon"></i
+          ></a>
+        </div>
+
+        <div class="header__resume">
+          <h4>
+            Programmeur front-end débutant, accro au café et diplômé du Cégep de
+            Granby Haute-Yamaska. <br />
+            Je me spécialise en HTML, CSS, JavaScript, React et Redux. J'ai
+            aussi une fantastique recette de curry japonais et macaroni au
+            fromage.
+          </h4>
+        </div>
+        <div class="header__buttons">
+          <h2>Técharger mon C.V.</h2>
+          <a
+            class="ui button brown"
+            download
+            href="cv/CV_Caron_Laurent-Philippe_FR.pdf"
+            >Français</a
+          >
+          <a
+            class="ui button brown"
+            download
+            href="cv/Resume_Caron_Laurent-Philippe_EN.pdf"
+            >English</a
+          >
+        </div>
+      </header>
+    </div>
 
     <main>
+      <!-- START PROJECTS -->
+      <div class="section section__projects wood_back">
+        <div class="wood__tran-box"></div>
+        <h2>Projet</h2>
+
+        <div class="ui items">
+          <div class="ui item">
+            <div class="project__image">
+              <a href="pokedex/pokemon/pokemon.html" target="_blank">
+                <img class="ui image medium" src="img/projects/pokedex.png" />
+              </a>
+            </div>
+            <div class="content" style="vertical-align: middle">
+              <a
+                href="pokedex/pokemon/pokemon.html"
+                target="_blank"
+                class="ui link header"
+                >Pokédex Crystal</a
+              >
+              <div class="meta">
+                <span>HTML/CSS/JS Vanille, SASS, Cypress, Axios </span>
+              </div>
+              <div class="description">
+                <p>
+                  Application web émulant le Pokedex du jeu Pokemon Version
+                  Crystal. <br />
+                  Tous les 251 pokémons du jeu y sont inclus avec leur
+                  description.<br />
+                  En activant le sont de votre navigateur, vous pourrez même
+                  écouter leur crie. <br />Le logiciel est connecté sur l'API
+                  PokéAPI
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END PROJECTS -->
+
       <div class="exps section">
         <h2 class="section-title">Expériences Professionnelles</h2>
 
@@ -236,7 +291,8 @@
         </div>
       </div>
 
-      <div class="section section__skills">
+      <div class="section section__skills wood_back">
+        <div class="wood__tran-box"></div>
         <h2 class="section-title">Compétences</h2>
         <div class="skills">
           <div class="skill-box">
@@ -281,8 +337,8 @@
             <div class="bottom__skil">
               <h4><i class="js icon big"></i>JavaScript vanille</h4>
               <div class="ui brown progress inverted">
-                <div class="bar" style="width: 30%">
-                  <div class="progress">3/10</div>
+                <div class="bar" style="width: 50%">
+                  <div class="progress">5/10</div>
                 </div>
               </div>
             </div>
@@ -511,8 +567,9 @@
       <p>Créé par Laurent-Philippe Caron</p>
       <p>Mis à jour le 11 septembre 2020</p>
       <p class="footer__up">
-        <a href="#top"><i class="ui icon arrow up huge"></i></a>
+        <a><i class="ui icon arrow up huge"></i></a>
       </p>
     </footer>
   </body>
+  <script src="cv.js"></script>
 </html>

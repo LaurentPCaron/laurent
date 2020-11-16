@@ -1,0 +1,85 @@
+@font-face {
+  font-family: pixel;
+  src: url("./font/pixel.ttf"); }
+@font-face {
+  font-family: pokemon;
+  src: url("./font/Pokemon Solid.ttf"); }
+.pokedex__container {
+  font-family: pixel;
+  width: 550px; }
+  .pokedex__container .title {
+    text-align: center;
+    font-family: pokemon;
+    font-size: 2.5rem;
+    color: #FFC937;
+    -webkit-text-stroke: 0.2rem #3566AA; }
+  .pokedex__container #pokemon {
+    font-size: 1.6rem;
+    background: #DA4D32;
+    height: 500px;
+    padding: 20px 2px 0 2px;
+    color: white; }
+  .pokedex__container #main {
+    background: black;
+    border: solid white;
+    height: 450px; }
+  .pokedex__container .top {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    margin: 8px 4px;
+    border-bottom: solid 5px #DA4D32; }
+  .pokedex__container .top_left {
+    display: grid; }
+  .pokedex__container .top_left__image {
+    background-size: 100%;
+    background-color: white;
+    width: 220px;
+    height: 220px; }
+  .pokedex__container .top_left__number {
+    justify-self: center;
+    font-weight: bold;
+    line-height: 1;
+    height: 45px; }
+  .pokedex__container .top_left__page p {
+    padding-left: 2px;
+    margin: 0;
+    border: solid 5px #DA4D32;
+    border-bottom: none;
+    width: 50px;
+    height: 20px;
+    font-size: 1.2rem;
+    line-height: 1; }
+  .pokedex__container .top_right {
+    padding-top: 40px;
+    padding-left: 35px;
+    display: grid;
+    font-size: 1.5rem;
+    grid-template-rows: repeat(1fr); }
+  .pokedex__container .description {
+    padding-left: 35px;
+    height: 158px;
+    line-height: 2.5rem;
+    font-size: 1.7rem;
+    word-spacing: 1.3rem; }
+  .pokedex__container .bottom {
+    height: 28px;
+    border-radius: 25px;
+    display: grid;
+    grid-template-rows: auto;
+    background: black;
+    grid-template-areas: "page cry print back";
+    justify-items: center; }
+    .pokedex__container .bottom .control {
+      line-height: 0.8; }
+      .pokedex__container .bottom .control i {
+        font-style: normal;
+        visibility: hidden; }
+    .pokedex__container .bottom .control:first-of-type i {
+      visibility: visible; }
+  .pokedex__container .tutorial {
+    display: grid;
+    grid-template-columns: 1fr 1fr; }
+    .pokedex__container .tutorial div {
+      border-bottom: solid 1px; }
+
+/*# sourceMappingURL=main.css.map */

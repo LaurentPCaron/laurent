@@ -1,3 +1,11 @@
+#top {
+  padding-top: 50px; }
+
+#top_menu {
+  width: 100%;
+  position: fixed;
+  z-index: 999; }
+
 body {
   background: #fff5dc; }
 
@@ -11,6 +19,7 @@ h1 {
   font-size: 400%; }
 
 h2 {
+  text-align: center;
   font-family: "Dancing Script", cursive;
   font-size: 300%; }
 
@@ -18,7 +27,7 @@ h2 {
   margin-bottom: 6rem;
   display: grid;
   grid-template-areas: "image" "content"; }
-  @media (min-width: 40rem) {
+  @media (min-width: 768px) {
     .exp {
       grid-template-columns: 50% 50%;
       grid-template-rows: auto; }
@@ -42,7 +51,7 @@ h2 {
   .box h3 {
     font-size: 150%;
     margin: 0.5rem 0rem; }
-  @media (min-width: 40rem) {
+  @media (min-width: 768px) {
     .box {
       width: 95%; } }
 
@@ -90,25 +99,25 @@ h2 {
     max-height: 13.2rem;
     padding-bottom: 1.2rem; }
 
-@media (min-width: 40rem) {
+@media (min-width: 768px) {
   .odd .box {
     margin: 0 auto 0 3rem; }
   .odd img {
     margin: 0 3rem 0 auto; } }
 
-@media (min-width: 40rem) {
+@media (min-width: 768px) {
   .even .box {
     margin: 0 3rem 0 auto; }
   .even img {
     margin: 0 auto 0 3rem; } }
 
 .page-title {
+  position: relative;
   color: #ffe6a7;
   width: 100%;
   padding-top: 2rem;
   padding-bottom: 11rem;
-  text-align: center;
-  background: #b67648 url("./img/exp-background.jpg"); }
+  text-align: center; }
 
 header {
   background: #ffe6a7;
@@ -146,38 +155,36 @@ header {
     grid-column: 1; }
     header .header__buttons .button {
       margin-bottom: 0.5rem; }
-  @media (min-width: 40rem) {
+  @media (min-width: 768px) {
     header {
       width: 45%; } }
 
 .section {
+  text-align: center;
   margin-bottom: 10rem; }
+  .section h2 {
+    padding-top: 1.2rem;
+    margin-bottom: 6rem;
+    text-align: center; }
 
 .section-title {
-  text-align: center;
-  color: #b67648;
-  margin-bottom: 6rem; }
-
-.section__skills {
-  padding-top: 1.2rem;
-  background: url("./img/exp-background.jpg"); }
-  .section__skills h2 {
-    color: #ffe6a7; }
+  color: #b67648; }
 
 .skills {
   padding-bottom: 1.6rem; }
-  @media (min-width: 40rem) {
+  @media (min-width: 768px) {
     .skills {
       display: flex;
       justify-content: center;
       flex-flow: row wrap; } }
 
 .skill-box {
+  z-index: 2;
   color: #ffffff;
   background: #432818;
   padding: 1.2rem;
   margin-bottom: 1rem; }
-  @media (min-width: 40rem) {
+  @media (min-width: 768px) {
     .skill-box {
       margin: 0 0.6rem 1rem 0.6rem;
       min-width: 30%; } }
@@ -190,7 +197,7 @@ header {
   .formation .bottom {
     margin: 0 3rem; }
 
-@media (min-width: 40rem) {
+@media (min-width: 768px) {
   .formation:nth-child(odd) {
     text-align: right; } }
 footer {
@@ -205,9 +212,67 @@ footer {
   footer a:hover {
     color: #b67648; }
   footer .footer__up {
+    cursor: pointer;
     display: none; }
-    @media (min-width: 40rem) {
+    @media (min-width: 768px) {
       footer .footer__up {
         display: block; } }
+
+.section__projects {
+  padding: 0 5rem 3rem 5rem; }
+  @media (min-width: 768px) {
+    .section__projects {
+      padding: 0 15rem 3rem 15rem; } }
+
+.section__projects .content {
+  display: flex !important;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 2;
+  margin: 0; }
+  .section__projects .content a.ui.header.link, .section__projects .content span, .section__projects .content p, .section__projects .content .extra.ui {
+    color: white; }
+  .section__projects .content a.ui.header.link:hover {
+    color: #b67648; }
+
+.section__projects .items {
+  justify-items: left;
+  text-align: left;
+  background: #432818;
+  padding: 1.2rem; }
+
+.project__image {
+  margin: 0 auto 1.5rem auto; }
+  @media (min-width: 768px) {
+    .project__image {
+      margin-right: 1.5rem;
+      margin-bottom: 0; } }
+
+.project__image:hover {
+  opacity: 0.7;
+  transition: opacity 0.1s; }
+
+.wood_back {
+  background: url("./img/exp-background.jpg");
+  position: relative; }
+  .wood_back h1, .wood_back h2 {
+    color: #ffe6a7;
+    position: relative;
+    z-index: 2; }
+
+.wood__tran-box {
+  position: absolute;
+  background: #432818;
+  opacity: 0.65;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 0; }
+
+#pokedex {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
 
 /*# sourceMappingURL=cv.css.map */

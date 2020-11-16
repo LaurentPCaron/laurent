@@ -5,7 +5,16 @@ $fonts: ("Big")
   @media (min-width: $width)
     @content
 
+#top
+  padding-top: 50px
+
+#top_menu
+  width: 100%
+  position: fixed
+  z-index: 999
+
 body
+
   background: #fff5dc
 
 a.ui.button.brown
@@ -17,6 +26,7 @@ h1
   font-family: 'Dancing Script', cursive
   font-size: 400%
 h2
+  text-align: center
   font-family: 'Dancing Script', cursive
   font-size: 300%
 
@@ -25,7 +35,7 @@ h2
   display: grid
   grid-template-areas: 'image''content'
 
-  @include media-min-width(40rem)
+  @include media-min-width(768px)
     grid-template-columns: 50% 50%
     grid-template-rows: auto
     &.odd
@@ -49,7 +59,7 @@ h2
   h3
     font-size: 150%
     margin: 0.5rem 0rem
-  @include media-min-width(40rem)
+  @include media-min-width(768px)
     width: 95%
 
 .box__title,
@@ -90,7 +100,7 @@ h2
   display: flex
   align-items: center
 
-  @include media-min-width(40rem)
+  @include media-min-width(768px)
 
   img
     margin: 0 auto
@@ -100,26 +110,26 @@ h2
     padding-bottom: 1.2rem
 
 .odd
-  @include media-min-width(40rem)
+  @include media-min-width(768px)
     .box
       margin: 0 auto 0 3rem
     img
       margin: 0 3rem 0 auto
 
 .even
-  @include media-min-width(40rem)
+  @include media-min-width(768px)
     .box
       margin: 0 3rem 0 auto
     img
       margin: 0 auto 0 3rem
 
 .page-title
+  position: relative
   color: map-get($colors, secondary )
   width: 100%
   padding-top: 2rem
   padding-bottom: 11rem
   text-align: center
-  background: map-get($colors, "primary" ) url("./img/exp-background.jpg")
 
 header
   background: map-get($colors, "secondary")
@@ -158,36 +168,34 @@ header
     grid-column: 1
     .button
       margin-bottom: 0.5rem
-  @include media-min-width(40rem)
+  @include media-min-width(768px)
     width: 45%
 
 .section
+  text-align: center
   margin-bottom: 10rem
+  h2
+    padding-top: 1.2rem
+    margin-bottom: 6rem
+    text-align: center
 
 .section-title
-  text-align: center
   color: map-get($colors, "primary" )
-  margin-bottom: 6rem
-
-.section__skills
-  padding-top: 1.2rem
-  background: url("./img/exp-background.jpg")
-  h2
-    color: map-get($colors, secondary )
 
 .skills
   padding-bottom: 1.6rem
-  @include media-min-width(40rem)
+  @include media-min-width(768px)
     display: flex
     justify-content: center
     flex-flow: row wrap
 
 .skill-box
+  z-index: 2
   color: map-get($colors,"text" )
   background: map-get($colors, "dark")
   padding: 1.2rem
   margin-bottom: 1rem
-  @include media-min-width(40rem)
+  @include media-min-width(768px)
     margin: 0 0.6rem 1rem 0.6rem
     min-width: 30%
 
@@ -201,7 +209,7 @@ header
   .bottom
     margin: 0 3rem
 
-@include media-min-width(40rem)
+@include media-min-width(768px)
   .formation:nth-child(odd)
     text-align: right
 
@@ -217,6 +225,62 @@ footer
   a:hover
     color: map-get($colors, "primary")
   .footer__up
+    cursor: pointer
     display: none
-    @include media-min-width(40rem)
+    @include media-min-width(768px)
       display: block
+
+//Projects section
+
+.section__projects
+  padding: 0 5rem 3rem 5rem
+  @include media-min-width(768px)
+    padding: 0 15rem 3rem 15rem
+
+.section__projects .content
+  display: flex !important
+  justify-content: center
+  flex-direction: column
+  z-index: 2
+  margin: 0
+  a.ui.header.link, span, p, .extra.ui
+    color: white
+  a.ui.header.link:hover
+    color: map-get($colors, "primary")
+
+.section__projects .items
+  justify-items: left
+  text-align: left
+  background: map-get($colors, "dark")
+  padding: 1.2rem
+.project__image
+  margin: 0 auto 1.5rem auto
+  @include media-min-width(768px)
+    margin-right: 1.5rem
+    margin-bottom: 0
+.project__image:hover
+  opacity: 0.7
+  transition: opacity 0.1s
+
+//DECORATION
+.wood_back
+  background: url("./img/exp-background.jpg")
+  position: relative
+  h1,h2
+    color: map-get($colors,'secondary' )
+    position: relative
+    z-index: 2
+.wood__tran-box
+  position: absolute
+  background: map-get($colors, "dark" )
+  opacity: 0.65
+  top: 0
+  left: 0
+  height: 100%
+  width: 100%
+  z-index: 0
+
+#pokedex
+  display: flex
+  justify-content: center
+  align-items: center
