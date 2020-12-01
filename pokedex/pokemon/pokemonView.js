@@ -110,7 +110,7 @@ const pokemonTemplate = ({
   }
   return `
   <div class="pokedex__container">
-    <div class="title">Pokedex Pokémon Crytal</div>
+    <div class="title">Pokedex Pokémon Crystal</div>
     <div id="pokemon">
       <div id="main">
         <div class="top">

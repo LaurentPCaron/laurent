@@ -5,6 +5,18 @@
   width: 100%;
   position: fixed;
   z-index: 999; }
+  #top_menu .hidden {
+    display: none; }
+  @media (min-width: 768px) {
+    #top_menu {
+      display: block; }
+      #top_menu .hidden {
+        display: block; } }
+  #top_menu .burger {
+    cursor: pointer; }
+    @media (min-width: 768px) {
+      #top_menu .burger {
+        display: none; } }
 
 body {
   background: #fff5dc; }
@@ -199,7 +211,10 @@ header {
 
 @media (min-width: 768px) {
   .formation:nth-child(odd) {
-    text-align: right; } }
+    text-align: right; }
+
+  .formation:nth-child(even) {
+    text-align: left; } }
 footer {
   padding: 2rem 1.2rem 0 1.2rem;
   transform: translateY(15rem);

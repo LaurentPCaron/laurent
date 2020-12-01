@@ -7,11 +7,31 @@ const Y_POSITION_SKILLS =
 const Y_POSITION_EDUC = document.querySelector('.formations').offsetTop - 100;
 
 //MENU ITEMS
+const menuOptions = document.querySelector('.top_menu_options');
+const burgerBtn = document.querySelector('.burger');
 const menuHomeBtn = document.querySelector('#menu__home');
 const menuProjectsBtn = document.querySelector('#menu__projects');
 const menuExpBtn = document.querySelector('#menu__exp');
 const menuSkillsBtn = document.querySelector('#menu__skills');
 const menuEducBtn = document.querySelector('#menu__educ');
+
+//Toggle buger menu
+burgerBtn.addEventListener('click', () => {
+  if (menuOptions.className.includes('hidden')) {
+    menuOptions.classList.remove('hidden');
+  } else {
+    menuOptions.classList.add('hidden');
+  }
+});
+
+document.addEventListener('click', e => {
+  if (
+    !e.target.className.includes('burger') &&
+    !menuOptions.className.includes('hidden')
+  ) {
+    menuOptions.classList.add('hidden');
+  }
+});
 
 //Menu Items Event
 menuHomeBtn.addEventListener('click', e => {
@@ -32,6 +52,9 @@ menuEducBtn.addEventListener('click', e => {
 
 //Scrolling event for the menu
 window.addEventListener('scroll', () => {
+  if (!menuOptions.className.includes('hidden')) {
+    menuOptions.classList.add('hidden');
+  }
   const y = window.scrollY;
 
   if (y >= Y_POSITION_HOME && y < Y_POSITION_PROJECT) {

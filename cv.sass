@@ -7,14 +7,23 @@ $fonts: ("Big")
 
 #top
   padding-top: 50px
-
+// TOP MENU
 #top_menu
   width: 100%
   position: fixed
   z-index: 999
+  .hidden
+    display: none
+  @include media-min-width(768px)
+    display: block
+    .hidden
+      display: block
+  .burger
+    cursor: pointer
+    @include media-min-width(768px)
+      display: none
 
 body
-
   background: #fff5dc
 
 a.ui.button.brown
@@ -212,6 +221,8 @@ header
 @include media-min-width(768px)
   .formation:nth-child(odd)
     text-align: right
+  .formation:nth-child(even)
+    text-align: left
 
 footer
   padding: 2rem 1.2rem 0 1.2rem
@@ -280,6 +291,7 @@ footer
   width: 100%
   z-index: 0
 
+// Other page
 #pokedex
   display: flex
   justify-content: center
