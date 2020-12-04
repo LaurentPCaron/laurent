@@ -1,5 +1,7 @@
 const SFXSelect = new Audio('../sound/sfx/SFX_PRESS_AB.wav');
+SFXSelect.volume = 0.1;
 const SFXBack = new Audio('../sound/sfx/SFX_BACK.wav');
+SFXBack.volume = 0.1;
 const SFXPrint = new Audio('../sound/sfx/SFX_Printer.mp3');
 
 let cursorPostion = 0;
@@ -23,6 +25,7 @@ onRenderPokemon = pokemon => {
     document.querySelector('#pokedex').innerHTML = pokemonTemplate(res);
     onPlayCry(res.cryURL);
     _pokemon = res;
+    addBtnListeners();
   });
 };
 
@@ -70,7 +73,9 @@ onChangePage = description => {
 };
 
 onPlayCry = cryURL => {
-  new Audio(cryURL).play();
+  const cry = new Audio(cryURL);
+  cry.volume = 0.1;
+  cry.play();
 };
 
 onPrint = () => {
@@ -150,10 +155,18 @@ const pokemonTemplate = ({
         </div>
       </div>
     </div>
-    <div class="tutorial">
+    <div class="tutorial" data-cy="tutorial">
       <div>◄ ►</div><div>Move cursor</div>
       <div>▲ ▼</div><div>Change Pokémon</div>
       <div>A/ENTER</div><div>Select</div>
+    </div>
+    <div class="mobile_control" data-cy="mobile_control"> 
+      <div id='button_up' data-cy="btn_up">▲</div>
+      <div id='button_left' data-cy="btn_left">◄</div>
+      <div id='button_right' data-cy="btn_right">►</div>
+      <div id='button_down' data-cy="btn_down">▼</div>
+      <div id='button_A' data-cy="btn_A">A</div>
+      <div id='button_B' data-cy="btn_B">B</div>
     </div>
   </div>
     `;
@@ -162,7 +175,9 @@ if (!window.location.search) {
   window.location.search = `id=1`;
 }
 onRenderPokemon(new Pokemon(getPkmnId()));
+//CONTROLS
 
+//KEYBOARD
 document.addEventListener('keydown', e => {
   switch (e.key) {
     case 'Enter':
@@ -190,6 +205,25 @@ document.addEventListener('keydown', e => {
   }
 });
 
+//MOBILE
+addBtnListeners = () => {
+  document
+    .querySelector('#button_up')
+    .addEventListener('click', () => onChangePokemon(-1));
+  document
+    .querySelector('#button_down')
+    .addEventListener('click', () => onChangePokemon(1));
+  document
+    .querySelector('#button_left')
+    .addEventListener('click', () => onCursorMove(-1));
+  document
+    .querySelector('#button_right')
+    .addEventListener('click', () => onCursorMove(1));
+  document
+    .querySelector('#button_A')
+    .addEventListener('click', () => onSelect(_pokemon));
+  document.querySelector('#button_B').addEventListener('click', () => onBack());
+};
 window.addEventListener('afterprint', () => {
   SFXPrint.pause();
   SFXPrint.currentTime = 0;
