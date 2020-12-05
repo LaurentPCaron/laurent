@@ -79,7 +79,7 @@ body
 
     .top_right
         padding-top: 10%
-        padding-left: 2.2rem
+        padding-left: 1.2rem
         display: grid
         font-size: 4.5vw
         grid-template-rows: repeat(auto-fill, 20%)
@@ -114,7 +114,9 @@ body
                 visibility: hidden
 
         .control:first-of-type  i
-            visibility: visible
+            visibility: hidden
+            @media screen and ( min-width: 769px )
+                visibility: visible
 
     .tutorial
         display: none
@@ -125,5 +127,22 @@ body
                 border-bottom: solid 1px
     .mobile_control
         display: grid
+        grid-template-columns: repeat(auto-fill,50%)
+        grid-template-areas: "title title" "left right"
         @media screen and ( min-width: 769px )
             display: none
+    #mobile_control__title
+        font-size: 1.6rem
+        font-family: pixel
+        grid-area: title
+        justify-self: center
+    #button_left
+        transform: rotate(90deg)
+        grid-area: left
+        justify-self: center
+        width: 25%
+    #button_right
+        transform: rotate(-90deg)
+        grid-area: right
+        justify-self: center
+        width: 25%

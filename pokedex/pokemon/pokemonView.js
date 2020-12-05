@@ -3,6 +3,7 @@ SFXSelect.volume = 0.1;
 const SFXBack = new Audio('../sound/sfx/SFX_BACK.wav');
 SFXBack.volume = 0.1;
 const SFXPrint = new Audio('../sound/sfx/SFX_Printer.mp3');
+SFXPrint.volume = 0.3;
 
 let cursorPostion = 0;
 let page = 'P.1';
@@ -141,16 +142,16 @@ const pokemonTemplate = ({
         <div class="description" data-cy="description">${description[1]}</div>
       </div>
       <div class="bottom">
-        <div class="control" data-cy="btn_page">
+        <div class="control btn_page"  data-cy="btn_page">
           <i class="cursor">></i>Page
         </div>
-        <div class="control" data-cy="btn_cry">
+        <div class="control btn_cry" data-cy="btn_cry">
           <i class="cursor">></i>Cry
         </div>
-        <div class="control" data-cy="btn_print">
+        <div class="control btn_print" data-cy="btn_print">
           <i class="cursor">></i>Print
         </div>
-        <div class="control" data-cy="btn_back">
+        <div class="control btn_back" data-cy="btn_back">
           <i class="cursor">></i>Back
         </div>
       </div>
@@ -161,12 +162,9 @@ const pokemonTemplate = ({
       <div>A/ENTER</div><div>Select</div>
     </div>
     <div class="mobile_control" data-cy="mobile_control"> 
-      <div id='button_up' data-cy="btn_up">▲</div>
-      <div id='button_left' data-cy="btn_left">◄</div>
-      <div id='button_right' data-cy="btn_right">►</div>
-      <div id='button_down' data-cy="btn_down">▼</div>
-      <div id='button_A' data-cy="btn_A">A</div>
-      <div id='button_B' data-cy="btn_B">B</div>
+      <h2 id="mobile_control__title">Change Pokémon</h2>
+      <img id="button_left" data-cy="btn_left" src="../img/arrow.png" alt="left arrow button">
+      <img id="button_right" data-cy="btn_right" src="../img/arrow.png" alt="left arrow button">
     </div>
   </div>
     `;
@@ -208,21 +206,23 @@ document.addEventListener('keydown', e => {
 //MOBILE
 addBtnListeners = () => {
   document
-    .querySelector('#button_up')
-    .addEventListener('click', () => onChangePokemon(-1));
-  document
-    .querySelector('#button_down')
-    .addEventListener('click', () => onChangePokemon(1));
-  document
     .querySelector('#button_left')
-    .addEventListener('click', () => onCursorMove(-1));
+    .addEventListener('touchstart', () => onChangePokemon(-1));
   document
     .querySelector('#button_right')
-    .addEventListener('click', () => onCursorMove(1));
+    .addEventListener('touchstart', () => onChangePokemon(1));
   document
-    .querySelector('#button_A')
-    .addEventListener('click', () => onSelect(_pokemon));
-  document.querySelector('#button_B').addEventListener('click', () => onBack());
+    .querySelector('.btn_page')
+    .addEventListener('touchstart', () => onChangePage(_pokemon.description));
+  document
+    .querySelector('.btn_cry')
+    .addEventListener('touchstart', () => onPlayCry(_pokemon.cryURL));
+  document
+    .querySelector('.btn_print')
+    .addEventListener('touchstart', () => onPrint());
+  document
+    .querySelector('.btn_back')
+    .addEventListener('touchstart', () => onBack());
 };
 window.addEventListener('afterprint', () => {
   SFXPrint.pause();
