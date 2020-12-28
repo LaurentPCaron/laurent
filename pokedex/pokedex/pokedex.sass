@@ -1,0 +1,137 @@
+@import "../variables.sass"
+$v-list:("font-size":3vw, "max-font-size":16px)
+.pokedex__main
+    height: 80%
+    display: grid
+    grid-template-columns: 40% 55% 3%
+    grid-template-rows: 50% 50%
+    grid-template-areas: "image list scroll" "statue list scroll"
+    column-gap: 0.2rem
+
+    .image_container
+        grid-area: image
+        padding: 0.2rem
+        height: 100%
+        .image
+            height: 100%
+            padding: 0
+            position: relative
+            img
+                height: 100%
+                width: 100%
+                filter: greyscale(1)
+                -webkit-filter: grayscale(100%)
+
+        .image__filter
+            position: absolute
+            top: 0px
+            background-color: #54B800
+            opacity: 0.6
+            height: 100%
+            width: 100%
+
+    .statue
+        margin-top: 2.2rem
+        grid-area: statue
+        ul
+            font-size: 3.8vw
+            list-style-type: none
+            padding: 0
+            margin-bottom: 0
+            @media screen and ( min-width: 551px )
+                font-size: 20.9px
+            li:nth-child(even)
+                text-align: right
+    .list
+        position: relative
+        grid-area: list
+        display: grid
+        font-size: map-get($v-list,"font-size")
+        @media screen and ( min-width: 551px )
+            font-size: map-get($v-list,"max-font-size" )
+        .arrow
+            position: absolute
+            height: 4%
+            width: 15%
+            background-color: white
+            left: 42.5%
+            img
+                position: absolute
+                height: 200%
+                width: 40%
+                top: -50%
+                left: 30%
+
+                filter: brightness(0)
+        #list__up
+            top: -4%
+            img
+                transform: rotate(-90deg)
+        #list__down
+            top: 99.5%
+            img
+                transform: rotate(90deg)
+
+        ul
+            position: relative
+            height: 100%
+            display: grid
+            margin: 0
+            padding-left: 1rem
+            list-style: none
+
+            li::before
+                content: ''
+                display: inline-block
+                height: map-get($v-list,"font-size")
+                width: map-get($v-list,"font-size")
+                margin-right: 5%
+                background-size: 100%
+                background-image: url("../img/pokeball_node.png")
+                @media screen and ( min-width: 551px )
+                    height: 20.89px
+                    width: 20.89px
+
+    .scroll
+        position: relative
+        grid-area: scroll
+
+        #scroll__pointer
+            position: absolute
+            border-left: none
+            border-right: none
+            margin: 0 auto
+            width: 100%
+            height: 2.5%
+            top: var(--scroler-pointer, 0%) //max 97%
+            background-color: $background-color
+
+.pokedex__bottom
+    height: 20%
+    display: grid
+    justify-items: center
+    align-items: center
+    grid-template-areas: "option search"
+
+    .pokedex__btn
+        text-decoration: line-through
+        padding: 0 15px
+        font-size: 2.8vw
+        border-radius: 25px
+        background-color: black
+        @media screen and ( min-width: 551px )
+            font-size: 15.4px
+    img
+        height: 3vw
+        @media screen and ( min-width: 551px )
+            height: 16.5px
+
+//Cursor
+#cursor
+    display: none
+    @media screen and ( min-width: 551px )
+        display: block
+        position: absolute
+        height: 15%
+        width: 100.5%
+        top: var(--list-cursor, 0%)//85% //min 0% max 85%
